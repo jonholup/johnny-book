@@ -2,7 +2,7 @@ console.log('jonny book success!');
 
 $(document).ready(function(){
 
-jonnyFunction();
+teamAppend();
 getLikes();
 
   console.log('jquery success');
@@ -21,14 +21,19 @@ getLikes();
     })
   }); // end #likes on click
 
-  function jonnyFunction() {
+  function teamAppend() {
     $.ajax({
       type: 'GET',
       url: '/bios',
       success: function(response) {
-        $('#jonny').append('<h1 id="name">' + response[0].name + '</h1>');
-        $('#jonny').append('<p id="bio">' + response[0].bio + '</p>');
-        $('#jonny').append('<a id="url" href=" ">' + response[0].url + '</a>');
+        for (var i = 0; i < response.length; i++) {
+          $('#usContainer').append('<div id="' + response[i].name + '">');
+          $('#usContainer:last-child').append('<h1>' + response[i].name + '</h1>');
+          $('#usContainer:last-child').append('<p>' + response[i].bio + '</p>');
+          $('#usContainer:last-child').append('<img src="' + response[i].image + '">');
+          // NOTE: dynamically append buttons
+        }
+
       }
     })
   } // end jonnyFunction

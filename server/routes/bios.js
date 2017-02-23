@@ -5,7 +5,7 @@ var usArray = [
 {
   name: 'jonny',
   bio: 'bio',
-  image: 'url'
+  image: '../assets/images/jonny.png'
 },
 {
   name: 'paige',
