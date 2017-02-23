@@ -7,26 +7,26 @@ router.get('/', function(req, res){
 });
 
 router.post('/jonny', function(req, res){
-  var jonnyLikes = req.body;
-  likeObject.jonny += parseInt(jonnyLikes.like);
+  var jonnyLikes = parseInt(req.body.like);
+  likeObject.jonny += jonnyLikes;
   console.log(likeObject);
   res.sendStatus(200);
 });
 
 router.post('/paige', function(req, res){
-  var paigeLikes = req.body;
+  var paigeLikes = parseInt(req.body.like);
   likeObject.paige += paigeLikes;
   res.sendStatus(200);
 });
 
 router.post('/sam', function(req, res){
-  var samLikes = req.body;
+  var samLikes = parseInt(req.body.like);
   likeObject.sam += samLikes;
   res.sendStatus(200);
 });
 
 router.post('/christine', function(req, res){
-  var christineLikes = req.body;
+  var christineLikes = parseInt(req.body.like);
   likeObject.christine += christineLikes;
   res.sendStatus(200);
 });
