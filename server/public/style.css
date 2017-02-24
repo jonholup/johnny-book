@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Facebook;
+  src: url("../assets/typeface/FACEBOLF.OTF");
+}
+
+#usContainer img {
+  height: 200px;
+  width: auto;
+  margin-left: -50px;
+}
+
+#christineDiv img {
+  height: 500px;
+  width: auto;
+  margin: -250px 0 0 -250px;
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+#jonnyDiv, #paigeDiv, #samDiv, #christineDiv{
+  display: inline-block;
+  /*background: #afbdd4;*/
+  width: 50%;
+  text-align: center;
+  margin: none;
+}
+
+#logo {
+  background: #3b5998;
+  width: 100%;
+}
+#logo img {
+  height: 100px;
+}
+
+#usContainer {
+  width: 100%;
+  margin: auto;
+  background: #afbdd4;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+
+}
+
+#jonny, #paige, #christine, #sam {
+  width: 100px !important;
+  height: auto !important;
+  margin: 0 !important;
+  clear: both;
+
+}
+
+#jonny:hover, #paige:hover, #christine:hover, #sam:hover {
+  background: #d8dfea;
+  cursor: pointer:
+}
+
+#jonny:active, #paige:active, #christine:active, #sam:active {
+  background: #0e1f56;
+  cursor: pointer:
+}

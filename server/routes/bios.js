@@ -4,23 +4,23 @@ var router = express.Router();
 var usArray = [
 {
   name: 'jonny',
-  bio: 'bio',
-  image: '../assets/images/jonny.png'
+  bio: 'creator of jonnybook, prom king',
+  image: '../assets/images/jonny.jpg'
 },
 {
   name: 'paige',
-  bio: 'bio',
-  image: 'url'
+  bio: 'merp',
+  image: '../assets/images/paige.jpg'
 },
 {
   name: 'sam',
-  bio: 'bio',
-  image: 'url'
+  bio: 'sam has a reputation on linkedin',
+  image: '../assets/images/sam.jpg'
 },
 {
   name: 'christine',
-  bio: 'bio',
-  image: 'url'
+  bio: 'Christine is pretty convinced she\'s a cat',
+  image: '../assets/images/christine.png'
 }
 ];
 

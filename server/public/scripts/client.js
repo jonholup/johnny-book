@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   console.log('jquery success');
 
-  $('#usContainer').on('click', 'button', function(){
+  $('#usContainer').on('click', 'img', function(){
     var teamLikeObject = {};
     teamLikeObject.like = 1;
 
@@ -30,17 +30,14 @@ $(document).ready(function(){
       url: '/bios',
       success: function(response) {
         for (var i = 0; i < response.length; i++) {
-          $('#usContainer').append('<div id="' + response[i].name + '">');
-          $('#usContainer:last-child').append('<h1>' + response[i].name + '</h1>');
-          $('#usContainer:last-child').append('<p>' + response[i].bio + '</p>');
-          $('#usContainer:last-child').append('<img src="' + response[i].image + '">');
-          $('#usContainer:last-child').append('<h3>Number of likes: <span id="' + response[i].name + 'Counter">0</span></h3>')
-          $('#usContainer:last-child').append('<button id="' + response[i].name +'">+1</button>')
+          $('#usContainer').append('<div id="' + response[i].name + 'Div">');
+          $('#' + response[i].name + 'Div').append('<h1>' + response[i].name + '</h1>');
+          $('#' + response[i].name + 'Div').append('<p>' + response[i].bio + '</p>');
+          $('#' + response[i].name + 'Div').append('<div class="image"><img src="' + response[i].image + '"></div>');
+          $('#' + response[i].name + 'Div').append('<h3>number of likes: <span id="' + response[i].name + 'Counter">0</span></h3>')
+          $('#' + response[i].name + 'Div').append('<img src="../assets/images/thumbs-up.png" id="' + response[i].name +'"></button>')
           // NOTE: dynamically append buttons
         }
-
-        // getLikes();
-        // getLikes(response[i].name)
 
       }
     })
