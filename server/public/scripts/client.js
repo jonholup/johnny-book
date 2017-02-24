@@ -3,7 +3,7 @@ console.log('jonny book success!');
 $(document).ready(function(){
 
   teamAppend();
-  // getLikes();
+  getLikes();
 
   console.log('jquery success');
 
@@ -12,6 +12,7 @@ $(document).ready(function(){
     teamLikeObject.like = 1;
 
     var person = $(this).attr('id');
+    // var person = 'jonny';
 
     $.ajax({
       type: 'POST',
@@ -34,7 +35,7 @@ $(document).ready(function(){
           $('#' + response[i].name + 'Div').append('<h1>' + response[i].name + '</h1>');
           $('#' + response[i].name + 'Div').append('<p>' + response[i].bio + '</p>');
           $('#' + response[i].name + 'Div').append('<div class="image"><img src="' + response[i].image + '"></div>');
-          $('#' + response[i].name + 'Div').append('<h3>number of likes: <span id="' + response[i].name + 'Counter">0</span></h3>')
+          $('#' + response[i].name + 'Div').append('<h3>likes: <span id="' + response[i].name + 'Counter">0</span></h3>')
           $('#' + response[i].name + 'Div').append('<img src="../assets/images/thumbs-up.png" id="' + response[i].name +'"></button>')
           // NOTE: dynamically append buttons
         }
